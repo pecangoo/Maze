@@ -1,0 +1,47 @@
+\hypertarget{mikkimouse_8h_source}{}\doxysection{mikkimouse.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MIKKIMOUSE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MIKKIMOUSE\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}models.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <stack>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_mikki_mouse}{MikkiMouse}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9 \textcolor{keyword}{public}:}
+\DoxyCodeLine{10     \mbox{\hyperlink{class_mikki_mouse}{MikkiMouse}}();}
+\DoxyCodeLine{11     std::vector<int> start\_searching(\mbox{\hyperlink{structmaze__cave}{model}} *maze, \mbox{\hyperlink{structball}{baloon}} start\_ball, \mbox{\hyperlink{structball}{baloon}} finish\_ball);}
+\DoxyCodeLine{12     \textcolor{keywordtype}{void} point\_array\_creation(\mbox{\hyperlink{structmaze__cave}{model}} * maze, std::vector<line\_points> * array\_lines);}
+\DoxyCodeLine{13 \textcolor{keyword}{private}:}
+\DoxyCodeLine{14     std::vector<int> result\_way;}
+\DoxyCodeLine{15     std::pair<int, int> current\_point;}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{keywordtype}{int} find\_way(\mbox{\hyperlink{structmaze__cave}{model}} maze);}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} get\_value\_from\_vector(std::vector<int> array, \textcolor{keywordtype}{int} col, \textcolor{keywordtype}{int} row)\{}
+\DoxyCodeLine{20          \textcolor{keywordflow}{return} array[col + row*col];}
+\DoxyCodeLine{21     \}}
+\DoxyCodeLine{22     \textcolor{keywordtype}{bool} get\_value\_from\_vector(std::vector<bool> array, \textcolor{keywordtype}{int} col, \textcolor{keywordtype}{int} row)\{}
+\DoxyCodeLine{23          \textcolor{keywordflow}{return} array[col + row*col];}
+\DoxyCodeLine{24     \}}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} set\_value\_in\_vector(\textcolor{keywordtype}{int} col, \textcolor{keywordtype}{int} row, \textcolor{keywordtype}{int} value) \{}
+\DoxyCodeLine{26          result\_way[col + row] = value;}
+\DoxyCodeLine{27     \}}
+\DoxyCodeLine{28     \textcolor{keywordtype}{bool} check\_border(std::vector<bool> array, \textcolor{keywordtype}{int} pos)\{}
+\DoxyCodeLine{29         \textcolor{comment}{// std::cout << "{}POS "{}<< pos << std::endl;}}
+\DoxyCodeLine{30         \textcolor{keywordflow}{return} array[pos];}
+\DoxyCodeLine{31     \}}
+\DoxyCodeLine{32    \textcolor{keywordtype}{int} is\_side\_free(\mbox{\hyperlink{structmaze__cave}{model}} maze, \textcolor{keywordtype}{int} current\_step);}
+\DoxyCodeLine{33    \textcolor{keywordtype}{int} find\_way(\mbox{\hyperlink{structmaze__cave}{model}} *maze);}
+\DoxyCodeLine{34    \textcolor{keywordtype}{int} line\_way\_pos(\mbox{\hyperlink{structmaze__cave}{model}} * maze, \textcolor{keywordtype}{int} pos\_temp, \textcolor{keywordtype}{int} pos\_current);}
+\DoxyCodeLine{35    \textcolor{keywordtype}{int} track = 1;}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// MIKKIMOUSE\_H}}
+
+\end{DoxyCode}

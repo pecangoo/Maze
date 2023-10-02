@@ -1,0 +1,44 @@
+\hypertarget{eller_8h_source}{}\doxysection{eller.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef ELLER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define ELLER\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}models.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{comment}{/*}}
+\DoxyCodeLine{7 \textcolor{comment}{ * @brief реализация алгоритма Эллера}}
+\DoxyCodeLine{8 \textcolor{comment}{ */}}
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_eller}{Eller}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11 \textcolor{keyword}{public}:}
+\DoxyCodeLine{12     \mbox{\hyperlink{class_eller}{Eller}}();}
+\DoxyCodeLine{13     \textcolor{keywordtype}{void} start\_create\_maze\_eller(\mbox{\hyperlink{structmaze__cave}{model}} *maze\_model, \textcolor{keywordtype}{int} rows, \textcolor{keywordtype}{int} cols);}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{private}:}
+\DoxyCodeLine{17     std::vector<int> maze\_sets;}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} fill\_empty\_value\_1(\textcolor{keywordtype}{int} cols);}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} assign\_unique\_set\_2(\textcolor{keywordtype}{int} cols, \textcolor{keywordtype}{int} current\_row);}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} create\_random\_borders\_3\_1(\mbox{\hyperlink{structmaze__cave}{model}} *maze\_model, \textcolor{keywordtype}{int} cols, \textcolor{keywordtype}{int} rows);}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} add\_borders\_3\_1\_1(\mbox{\hyperlink{structmaze__cave}{model}} * maze\_model, \textcolor{keywordtype}{int} cols, \textcolor{keywordtype}{int} current\_row);}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} merge\_sets\_3\_2(\textcolor{keywordtype}{int} current\_row, \textcolor{keywordtype}{int} index, \textcolor{keywordtype}{int} element, \textcolor{keywordtype}{int} cols);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} create\_down\_borders\_4\_1(\mbox{\hyperlink{structmaze__cave}{model}} *maze\_model, \textcolor{keywordtype}{int} cols, \textcolor{keywordtype}{int} rows);}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} copy\_prev\_in\_next\_row\_5\_1(\mbox{\hyperlink{structmaze__cave}{model}} *maze\_model, \textcolor{keywordtype}{int} cols, \textcolor{keywordtype}{int} current\_row);}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} action\_after\_generate\_5\_2(\mbox{\hyperlink{structmaze__cave}{model}} *maze\_model, \textcolor{keywordtype}{int} cols, \textcolor{keywordtype}{int} current\_row);}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} checkedEndLine(\mbox{\hyperlink{structmaze__cave}{model}} *maze\_model, \textcolor{keywordtype}{int} cols, \textcolor{keywordtype}{int} current\_row);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} addingVerticalWalls\_3\_1(\mbox{\hyperlink{structmaze__cave}{model}} *maze\_model, \textcolor{keywordtype}{int} cols, \textcolor{keywordtype}{int} current\_row);}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} mergeSet\_3\_2(\textcolor{keywordtype}{int} index, \textcolor{keywordtype}{int} element, \textcolor{keywordtype}{int} cols);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{keywordtype}{int} counter;}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// ELLER\_H}}
+
+\end{DoxyCode}

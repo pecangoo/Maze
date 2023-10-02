@@ -1,0 +1,49 @@
+\hypertarget{models_8h_source}{}\doxysection{models.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MODELS\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MODELS\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} START = 1;}
+\DoxyCodeLine{6 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} FINISH = -\/1;}
+\DoxyCodeLine{7 \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} NEXT\_STEP = -\/2;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{enum} \_type \{}
+\DoxyCodeLine{10     MAZE,}
+\DoxyCodeLine{11     CAVE}
+\DoxyCodeLine{12 \};}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{enum} way \{}
+\DoxyCodeLine{15     NO,}
+\DoxyCodeLine{16     UP,}
+\DoxyCodeLine{17     RIGHT,}
+\DoxyCodeLine{18     DOWN,}
+\DoxyCodeLine{19     LEFT,}
+\DoxyCodeLine{20     NOWAY}
+\DoxyCodeLine{21 \};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structmaze__cave}{maze\_cave}} \{}
+\DoxyCodeLine{24     std::vector<bool> first;}
+\DoxyCodeLine{25     std::vector<bool> second;}
+\DoxyCodeLine{26     std::vector<bool> line\_way;}
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} size\_col;}
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} size\_rows;}
+\DoxyCodeLine{29 \} \mbox{\hyperlink{structmaze__cave}{model}};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structline}{line}} \{}
+\DoxyCodeLine{33     \textcolor{keywordtype}{float} x\_start, y\_start, x\_finish, y\_finish;}
+\DoxyCodeLine{34 \} \mbox{\hyperlink{structline}{line\_points}};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structball}{ball}} \{}
+\DoxyCodeLine{38     \textcolor{keywordtype}{bool} is;}
+\DoxyCodeLine{39     \textcolor{keywordtype}{int} x\_pos, y\_pos;}
+\DoxyCodeLine{40     \textcolor{keywordtype}{int} radius\_x, radius\_y;}
+\DoxyCodeLine{41     \textcolor{keywordtype}{int} row, col;}
+\DoxyCodeLine{42 \} \mbox{\hyperlink{structball}{baloon}};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// MODELS\_H}}
+
+\end{DoxyCode}

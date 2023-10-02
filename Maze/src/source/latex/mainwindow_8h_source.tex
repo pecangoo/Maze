@@ -1,0 +1,76 @@
+\hypertarget{mainwindow_8h_source}{}\doxysection{mainwindow.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MAINWINDOW\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MAINWINDOW\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QMainWindow>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <QPainter>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <QFileDialog>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <QMessageBox>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <models.h>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <eller.h>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <QMouseEvent>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <mikkimouse.h>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <QMessageBox>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}init\_cave.h"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}gencave.h"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <QTimer>}}
+\DoxyCodeLine{16 QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{17 \textcolor{keyword}{namespace }Ui \{ \textcolor{keyword}{class }\mbox{\hyperlink{class_main_window}{MainWindow}}; \}}
+\DoxyCodeLine{18 QT\_END\_NAMESPACE}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{class_main_window}{MainWindow}} : \textcolor{keyword}{public} QMainWindow}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22     Q\_OBJECT}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_main_window}{MainWindow}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{26     \mbox{\hyperlink{class_main_window}{\string~MainWindow}}();}
+\DoxyCodeLine{27     \mbox{\hyperlink{structmaze__cave}{model}} maze\_scheme;}
+\DoxyCodeLine{28     \mbox{\hyperlink{structmaze__cave}{model}} cave\_scheme;}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{31     \textcolor{comment}{/* Определяем виртуальный метод родительского класса}}
+\DoxyCodeLine{32 \textcolor{comment}{     * для отрисовки содержимого виджета}}
+\DoxyCodeLine{33 \textcolor{comment}{     * */}}
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_main_window_abf05d580e91f725777cdb6a5eb0bf08c}{paintEvent}}(QPaintEvent *event);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} on\_save\_maze\_button\_clicked();}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} on\_open\_maze\_btn\_clicked();}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} on\_open\_cave\_btn\_clicked();}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} on\_tabWidget\_tabBarClicked(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} on\_generate\_maze\_btn\_clicked();}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} on\_widht\_line\_spin\_valueChanged(\textcolor{keywordtype}{int} arg1);}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} on\_color\_lines\_comboBox\_currentTextChanged(\textcolor{keyword}{const} QString \&arg1);}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} mousePressEvent(QMouseEvent* event);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} on\_find\_way\_btn\_clicked();}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} on\_clear\_maze\_clicked();}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} on\_generate\_cave\_btn\_clicked();}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     \textcolor{keywordtype}{void} on\_init\_cave\_btn\_clicked();}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \textcolor{keywordtype}{void} on\_radioButton\_2\_clicked(\textcolor{keywordtype}{bool} checked);}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     \textcolor{keywordtype}{void} on\_clear\_cave\_btn\_clicked();}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59     \textcolor{keywordtype}{void} on\_action\_triggered();}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{keyword}{private}:}
+\DoxyCodeLine{62     Ui::MainWindow *ui;}
+\DoxyCodeLine{63     \mbox{\hyperlink{structball}{baloon}} start\_ball, finish\_ball;}
+\DoxyCodeLine{64     \textcolor{keywordtype}{int} \_number\_of\_click;}
+\DoxyCodeLine{65     std::vector<line\_points> array\_lines;}
+\DoxyCodeLine{66     \textcolor{keywordtype}{void} draw\_ball(QImage image, \mbox{\hyperlink{structball}{baloon}} \mbox{\hyperlink{structball}{ball}}, QPainter * painter,  QColor color);}
+\DoxyCodeLine{67     \textcolor{keywordtype}{void} init\_cave();}
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} sleep(qint64 msec);}
+\DoxyCodeLine{69     \textcolor{keywordtype}{void} clear(\mbox{\hyperlink{structmaze__cave}{model}} * scheme);}
+\DoxyCodeLine{70 \};}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// MAINWINDOW\_H}}
+
+\end{DoxyCode}
